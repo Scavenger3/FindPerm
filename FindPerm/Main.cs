@@ -50,7 +50,7 @@ namespace FindPerm
 	        	{
 	        		if (cmd.Names.Contains(args.Parameters[0]))
 	        		{
-	        			args.Player.SendInfoMessage(string.Format("Permission to use {0}: {1}", cmd.Name, cmd.Permission != "" ? cmd.Permission : "Nothing"));
+	        			args.Player.SendInfoMessage(string.Format("Permission(s) to use {0}: {1}", cmd.Name, cmd.Permissions != null && !cmd.Permissions.Contains("") ? string.Join(", ", cmd.Permissions) : "Nothing"));
 	        			return;
 	        		}
 	        	}
